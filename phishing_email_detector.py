@@ -1,8 +1,8 @@
 # FILE NAME - phishing_email_detector.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Amy Nuessle
+# DATE: March 3, 2026
+# BRIEF DESCRIPTION: Write a program that analyzes an email subject line to detect phishing attempts
 
 
 
@@ -14,12 +14,31 @@
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
+user_input = input("Enter the email subject line: ")
+print()
+print("SECURITY ASSESSMENT: ")
+
+if "urgent" in user_input.lower(): 
+    print("HIGH RISK: Possible phishing attempt.")
+
+if "immediate action required" in user_input.lower():
+    print("HIGH RISK: Possible phishing attempt.")   
+
+if "win" in user_input.lower():
+    print("MEDIUM RISK: Suspicious offer detected.")
+
+if "free" in user_input.lower():
+    print("MEDIUM RISK: Suspicious offer detected.") 
+
+if "password reset" in user_input.lower():
+    print("LOW RISK: Verify legitimacy with sender.")
+
+else:
+    print("No phishing indicators detected.")
 
 
-
-
-
-
+print("------------------------")
+print(f"Analyzed subject: \"{user_input}\"") #this was my only struggle, getting the user input to print properly
 
 
 
@@ -76,7 +95,7 @@ Analyzed subject: "Did you request a password reset?"
 
 '''
 
-1. Was using `in` difficult or was it natural?
+1. Was using `in` difficult or was it natural? it was natural! once I played with the pylance suggesttions, I got it!
 
 
 
@@ -98,10 +117,10 @@ Please gauge your utilization of AI on the following spectrum. Place an "X" in f
 of the appropriate response. Only choose one of the following:
 
 [ ] I did not use AI at all for this lab.
-[ ] I wrote the initial draft of the software but had AI help me make it better.
+[X] I wrote the initial draft of the software but had AI help me make it better. 
 [ ] I fed the lab description to AI and had it generate a response but I modified it.
 [ ] AI created the entire program for me.
-
+#only needed help with the final print statement making progress!!
 
 
 It is critical in this class that you understand the concepts as we explore them because
@@ -111,7 +130,7 @@ may impede your understanding. Please rate how well you understand the concepts 
 
 [ ] I understand very little about this lab.
 [ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
-[ ] I pretty much get it.
+[X] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
 '''
