@@ -16,30 +16,39 @@
 ########## ENTER YER CODE BELOW THIS LINE ##########
 user_input = input("Enter the email subject line: ")
 print()
-print("SECURITY ASSESSMENT: ")
+print("SECURITY ASSESSMENT:")
 
-if "urgent" in user_input.lower(): 
+# check each phishing indicator and track if any were found - sought help from builder
+found = False
+
+if "urgent" in user_input.lower():
     print("HIGH RISK: Possible phishing attempt.")
+    found = True
 
 if "immediate action required" in user_input.lower():
-    print("HIGH RISK: Possible phishing attempt.")   
+    print("HIGH RISK: Possible phishing attempt.")
+    found = True
 
 if "win" in user_input.lower():
     print("MEDIUM RISK: Suspicious offer detected.")
+    found = True
 
 if "free" in user_input.lower():
-    print("MEDIUM RISK: Suspicious offer detected.") 
+    print("MEDIUM RISK: Suspicious offer detected.")
+    found = True
 
 if "password reset" in user_input.lower():
     print("LOW RISK: Verify legitimacy with sender.")
+    found = True
 
-else:
+# if no indicators were triggered, let the user know - sought help from builder
+if not found:
     print("No phishing indicators detected.")
 
 
 print("------------------------")
-print(f"Analyzed subject: \"{user_input}\"") #this was my only struggle, getting the user input to print properly
-
+print(f"Analyzed subject: \"{user_input}\"")
+#this was my only struggle, getting the user input to print properly
 
 
 
